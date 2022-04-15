@@ -27,13 +27,16 @@ class ValidatorCollection extends ArrayObject implements Configurable
 {
     /**
      * @var string[] The validation order, an array of validator class names. The omitted validators adding at end.
+     * ```php
+     * [
+     *   'yii\validators\DefaultValueValidator',
+     *   'yii\validators\RequiredValidator',
+     *   'yii\validators\FilterValidator',
+     *   'yii\captcha\CaptchaValidator',
+     * ]
+     * ```
      */
-    public $order = [
-        'yii\validators\DefaultValueValidator',
-        'yii\validators\RequiredValidator',
-        'yii\validators\FilterValidator',
-        'yii\captcha\CaptchaValidator',
-    ];
+    public $order = [];
 
     /**
      * @var Model The owner model.
@@ -104,7 +107,7 @@ class ValidatorCollection extends ArrayObject implements Configurable
      */
     public function sortByOrder()
     {
-        if ($this->getArrayCopy() !== []) {
+        if ($this->order !== [] && $this->getArrayCopy() !== []) {
             $validators = \array_fill_keys($this->order, []);
             foreach ($this->getArrayCopy() as $validator) {
                 $class = \get_class($validator);
