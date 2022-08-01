@@ -415,7 +415,7 @@ registered on [Packagist](https://packagist.org/) and can be easily installed as
 - [yiisoft/yii2-httpclient](https://www.yiiframework.com/extension/yiisoft/yii2-httpclient):
   provides an HTTP client.
 - [yiisoft/yii2-imagine](https://www.yiiframework.com/extension/yiisoft/yii2-imagine):
-  provides commonly used image manipulation functions based on [Imagine](http://imagine.readthedocs.org/).
+  provides commonly used image manipulation functions based on [Imagine](https://imagine.readthedocs.org/).
 - [yiisoft/yii2-jui](https://www.yiiframework.com/extension/yiisoft/yii2-jui):
   provides a set of widgets that encapsulate the [JQuery UI](http://jqueryui.com/) interactions and widgets.
 - [yiisoft/yii2-mongodb](https://www.yiiframework.com/extension/yiisoft/yii2-mongodb):
@@ -425,7 +425,7 @@ registered on [Packagist](https://packagist.org/) and can be easily installed as
   provides the supports for running tasks asynchronously via queues.
   It supports queues based on DB, Redis, RabbitMQ, AMQP, Beanstalk and Gearman.
 - [yiisoft/yii2-redis](https://www.yiiframework.com/extension/yiisoft/yii2-redis):
-  provides the support for using [redis](http://redis.io/). It includes features such as basic query,
+  provides the support for using [redis](https://redis.io/). It includes features such as basic query,
   Active Record, caching, etc.
 - [yiisoft/yii2-shell](https://www.yiiframework.com/extension/yiisoft/yii2-shell):
   provides an interactive shell based on [psysh](http://psysh.org/).

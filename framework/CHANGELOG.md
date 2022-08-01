@@ -4,6 +4,7 @@ Yii Framework 2 Change Log
 2.0.46 under development
 ------------------------
 
+- Bug #19467: Revert changes in `Inflector::camel2words()` introduced in #19204 (samdark)
 - Bug #19471: Enable console commands on hostings with disabled `exec()` function (WinterSilence, lubosdz)
 - Bug #19469: Fix a virtual relation not working because of new isset checks in `\yii\db\ActiveRelationTrait` (wvanheumen)
 - Bug #19380: Fix PHP 8.1 passing non string to trim() in `yii\db\Query` (wa1kb0y)
@@ -30,6 +31,7 @@ Yii Framework 2 Change Log
 - Bug #19368: Fix PHP 8.1 error when `$fileMimeType` is `null` in `yii\validators\FileValidator::validateMimeType()` (bizley)
 - Enh #19384: Normalize `setBodyParams()` and `getBodyParam()` in `yii\web\Request` (WinterSilence, albertborsos)
 - Bug #19386: Fix recursive calling `yii\helpers\BaseArrayHelper::htmlDecode()` (WinterSilence)
+- Bug #19407: Fix `yii\validators\UniqueValidator` and `yii\validators\ExistValidator` to respect `skipOnError` option for target attributes (bizley)
 - Bug #19418: Fix `yii\filters\auth\CompositeAuth` ignoring `only` and `except` options (lesha724)
 - Enh #19401: Delay `exit(1)` in `yii\base\ErrorHandler::handleFatalError` (arrilot)
 - Bug #19402: Add shutdown event and fix working directory in `yii\base\ErrorHandler` (WinterSilence)
@@ -42,6 +44,7 @@ Yii Framework 2 Change Log
 - Bug #19454: Fix PDO exception code not properly passed to `yii\db\Exception` (Roguyt)
 - Bug #19477: cast shell_exec() output to string (schmunk42)
 - Bug #19481: Exception is always empty in ErrorHandler when handling fatal error (Renkas)
+- Bug #19462: Fix validator client options to encode HTML tags (bizley)
 
 2.0.45 February 11, 2022
 ------------------------
