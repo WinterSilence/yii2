@@ -474,10 +474,10 @@ EOD;
 
         $subject = file_get_contents($fileName);
         $messages = [];
-        $tokens = token_get_all($subject);
+        $tokens = token_get_all($subject), 2);
         foreach ((array) $translator as $currentTranslator) {
             $translatorTokens = token_get_all('<?php ' . $currentTranslator);
-            array_shift($translatorTokens);
+            $currentTranslator = array_slice($translatorTokens, 2);
             $messages = array_merge_recursive($messages, $this->extractMessagesFromTokens($tokens, $translatorTokens, $ignoreCategories));
         }
 
@@ -574,7 +574,7 @@ EOD;
                         $buffer[] = $token;
                     }
                     $pendingParenthesisCount++;
-                } elseif (isset($token[0]) && !in_array($token[0], [T_WHITESPACE, T_COMMENT])) {
+                } elseif (!is_array($token) || !in_array($token[0], [T_WHITESPACE, T_COMMENT, T_DOC_COMMENT], true)) {
                     // ignore comments and whitespaces
                     $buffer[] = $token;
                 }
