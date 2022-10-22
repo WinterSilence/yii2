@@ -477,7 +477,7 @@ EOD;
         $tokens = token_get_all($subject), 2);
         foreach ((array) $translator as $currentTranslator) {
             $translatorTokens = token_get_all('<?php ' . $currentTranslator);
-            $currentTranslator = array_slice($translatorTokens, 2);
+            $translatorTokens = array_slice($translatorTokens, 2);
             $messages = array_merge_recursive($messages, $this->extractMessagesFromTokens($tokens, $translatorTokens, $ignoreCategories));
         }
 
